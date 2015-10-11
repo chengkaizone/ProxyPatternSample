@@ -13,6 +13,9 @@
 		12D937B01BCA4B88004A581C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D937AE1BCA4B88004A581C /* Main.storyboard */; };
 		12D937B21BCA4B88004A581C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12D937B11BCA4B88004A581C /* Assets.xcassets */; };
 		12D937B51BCA4B88004A581C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D937B31BCA4B88004A581C /* LaunchScreen.storyboard */; };
+		12D937BF1BCA4BDB004A581C /* AbstractProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D937BE1BCA4BDB004A581C /* AbstractProxy.m */; settings = {ASSET_TAGS = (); }; };
+		12D937C21BCA4DED004A581C /* AbstractExecute.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D937C11BCA4DED004A581C /* AbstractExecute.m */; settings = {ASSET_TAGS = (); }; };
+		12D937C61BCA4F91004A581C /* ConcreteProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D937C51BCA4F91004A581C /* ConcreteProxy.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,13 @@
 		12D937B11BCA4B88004A581C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12D937B41BCA4B88004A581C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12D937B61BCA4B88004A581C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12D937BD1BCA4BDB004A581C /* AbstractProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractProxy.h; sourceTree = "<group>"; };
+		12D937BE1BCA4BDB004A581C /* AbstractProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractProxy.m; sourceTree = "<group>"; };
+		12D937C01BCA4DED004A581C /* AbstractExecute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractExecute.h; sourceTree = "<group>"; };
+		12D937C11BCA4DED004A581C /* AbstractExecute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractExecute.m; sourceTree = "<group>"; };
+		12D937C31BCA4F3B004A581C /* MessageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageProtocol.h; sourceTree = "<group>"; };
+		12D937C41BCA4F91004A581C /* ConcreteProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConcreteProxy.h; sourceTree = "<group>"; };
+		12D937C51BCA4F91004A581C /* ConcreteProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcreteProxy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,7 @@
 				12D937A91BCA4B88004A581C /* AppDelegate.m */,
 				12D937AB1BCA4B88004A581C /* ViewController.h */,
 				12D937AC1BCA4B88004A581C /* ViewController.m */,
+				12D937BC1BCA4B9B004A581C /* AbstractProxy */,
 				12D937AE1BCA4B88004A581C /* Main.storyboard */,
 				12D937B11BCA4B88004A581C /* Assets.xcassets */,
 				12D937B31BCA4B88004A581C /* LaunchScreen.storyboard */,
@@ -77,6 +88,20 @@
 				12D937A61BCA4B88004A581C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		12D937BC1BCA4B9B004A581C /* AbstractProxy */ = {
+			isa = PBXGroup;
+			children = (
+				12D937BD1BCA4BDB004A581C /* AbstractProxy.h */,
+				12D937BE1BCA4BDB004A581C /* AbstractProxy.m */,
+				12D937C01BCA4DED004A581C /* AbstractExecute.h */,
+				12D937C11BCA4DED004A581C /* AbstractExecute.m */,
+				12D937C31BCA4F3B004A581C /* MessageProtocol.h */,
+				12D937C41BCA4F91004A581C /* ConcreteProxy.h */,
+				12D937C51BCA4F91004A581C /* ConcreteProxy.m */,
+			);
+			name = AbstractProxy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D937BF1BCA4BDB004A581C /* AbstractProxy.m in Sources */,
 				12D937AD1BCA4B88004A581C /* ViewController.m in Sources */,
 				12D937AA1BCA4B88004A581C /* AppDelegate.m in Sources */,
+				12D937C21BCA4DED004A581C /* AbstractExecute.m in Sources */,
 				12D937A71BCA4B88004A581C /* main.m in Sources */,
+				12D937C61BCA4F91004A581C /* ConcreteProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

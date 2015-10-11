@@ -7,8 +7,15 @@
 //
 
 #import "ViewController.h"
+#import "MessageProtocol.h"
+#import "ConcreteProxy.h"
 
-@interface ViewController ()
+
+/**
+ *  代理模式的简单运用,这个比较绕,我自己也有些晕,用到了c语言的库
+ *  参考自大师YouXianMing的设计模式理解
+ */
+@interface ViewController () <MessageProtocol>
 
 @end
 
@@ -16,12 +23,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    ConcreteProxy *proxy = [[ConcreteProxy alloc] initWithProxy:self];
+    
+    [proxy helloDesign];
+    
+    [proxy bye];
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)helloDesign {
+    NSLog(@"Hello 设计模式.");
 }
+
+//- (void)bye {
+//    NSLog(@"Good Bye.");
+//}
 
 @end
